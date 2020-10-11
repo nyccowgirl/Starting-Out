@@ -32,6 +32,7 @@ struct MovieData
 
 void display(const MovieData &movie);
 
+
 int main(int argc, const char * argv[]) {
     MovieData movie1 = {"The Princess Bride", "Rob Reiner", 1981, 93, 1472832.21, 2222222};
     MovieData movie2 = {"Titanic", "James Cameron", 1995, 140, 4573978.57, 5555555};
