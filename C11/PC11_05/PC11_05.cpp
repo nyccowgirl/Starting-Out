@@ -19,9 +19,6 @@ using namespace std;
 
 
 const int SIZE = 12;
-//const string MONTHS[SIZE] = {"January", "February", "March", "April", "May", "June",
-//                             "July", "August", "September", "October", "November",
-//                             "December"};
 
 
 struct Weather
@@ -42,8 +39,8 @@ bool validateInput(const double input, const char type);
 void display(const Weather annual[]);
 double calcTotal(const Weather annual[], const char type);
 double calcAvg(double total);
-int highestTemp(const Weather annual[]);
-int lowestTemp(const Weather annual[]);
+Month highestTemp(const Weather annual[]);
+Month lowestTemp(const Weather annual[]);
 void displayMthName(Month m);
 
 
@@ -65,10 +62,10 @@ int main(int argc, const char * argv[]) {
 void getInfo(Weather annual[]) {
     bool valid;
     char type;
-    int month;
+    Month month;
     
     for (month = JANUARY; month <= DECEMBER; month = static_cast<Month>(month + 1)) {
-        displayMthName(static_cast<Month>(month));
+        displayMthName(month);
         cout << ":" << endl;
         cout << "----------" << endl;
         
@@ -127,7 +124,7 @@ bool validateInput(const double input, const char type) {
 void display(const Weather annual[]) {
     char type;
     double totalRain;
-    int highest, lowest;
+    Month highest, lowest;
     
     totalRain = calcTotal(annual, type = 'R');
     highest = highestTemp(annual);
@@ -138,10 +135,10 @@ void display(const Weather annual[]) {
     cout << "Average monthly rainfall (in inches): " << calcAvg(totalRain) << endl;
     cout << "Total rainfall (in inches): " << totalRain << endl;
     cout << "Highest temperature (in Fahrenheit): " << annual[highest].highTemp << " (";
-    displayMthName(static_cast<Month>(highest));
+    displayMthName(highest);
     cout << ")" << endl;
     cout << "Lowest temperature (in Fahrenheit): " << annual[lowest].lowTemp << " (";
-    displayMthName(static_cast<Month>(lowest));
+    displayMthName(lowest);
     cout << ")" << endl;
     cout << "Average monthly temperature (in Fahrenheit): ";
     cout << calcAvg(calcTotal(annual, type = 'T')) << endl;
@@ -156,7 +153,7 @@ void display(const Weather annual[]) {
 
 double calcTotal(const Weather annual[], const char type) {
     double sumRain = 0, sumTemp = 0;
-    int month;
+    Month month;
     
     for (month = JANUARY; month <= DECEMBER; month = static_cast<Month>(month + 1)) {
         sumRain += annual[month].totalRain;
@@ -188,10 +185,9 @@ double calcAvg(double total) {
 
 // Definition of function highestTemp
 
-int highestTemp(const Weather annual[]) {
-//    int index = 0;
+Month highestTemp(const Weather annual[]) {
     double temp = annual[JANUARY].highTemp;
-    int month, index = JANUARY;
+    Month month, index = JANUARY;
         
     for (month = FEBRUARY; month <= DECEMBER; month = static_cast<Month>(month + 1)) {
         if (annual[month].highTemp > temp) {
@@ -209,10 +205,9 @@ int highestTemp(const Weather annual[]) {
 
 // Definition of function lowestTemp
 
-int lowestTemp(const Weather annual[]) {
-//    int index = 0;
+Month lowestTemp(const Weather annual[]) {
     double temp = annual[JANUARY].lowTemp;
-    int month, index = JANUARY;
+    Month month, index = JANUARY;
 
         
     for (month = FEBRUARY; month <= DECEMBER; month = static_cast<Month>(month + 1)) {
@@ -318,37 +313,37 @@ void displayMthName(Month m) {
  ----------
  Enter total rainfall (in inches): 2
  Enter high temperature (in Fahrenheit): 95
- Enter low temperature (in Fahrenheit): 88
+ Enter low temperature (in Fahrenheit): 2
 
  August:
+ ----------
+ Enter total rainfall (in inches): 3
+ Enter high temperature (in Fahrenheit): 95
+ Enter low temperature (in Fahrenheit): 88
+
+ September:
  ----------
  Enter total rainfall (in inches): 8
  Enter high temperature (in Fahrenheit): 93
  Enter low temperature (in Fahrenheit): 77
 
- September:
+ October:
  ----------
  Enter total rainfall (in inches): 10
  Enter high temperature (in Fahrenheit): 78
  Enter low temperature (in Fahrenheit): 64
 
- October:
+ November:
  ----------
  Enter total rainfall (in inches): 8
  Enter high temperature (in Fahrenheit): 64
  Enter low temperature (in Fahrenheit): 35
 
- November:
+ December:
  ----------
  Enter total rainfall (in inches): 9
  Enter high temperature (in Fahrenheit): 34
  Enter low temperature (in Fahrenheit): 7
-
- December:
- ----------
- Enter total rainfall (in inches): 3
- Enter high temperature (in Fahrenheit): 95
- Enter low temperature (in Fahrenheit): 2
 
  ANNUAL WEATHER SUMMARY
  ----------------------
@@ -358,5 +353,4 @@ void displayMthName(Month m) {
  Lowest temperature (in Fahrenheit): -18.00 (January)
  Average monthly temperature (in Fahrenheit): 54.08
  Program ended with exit code: 0
- 
  */
