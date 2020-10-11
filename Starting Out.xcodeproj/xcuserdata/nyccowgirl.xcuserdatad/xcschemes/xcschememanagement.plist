@@ -349,6 +349,16 @@
 			<key>orderHint</key>
 			<integer>109</integer>
 		</dict>
+		<key>PC11_01.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>111</integer>
+		</dict>
+		<key>PC11_02.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>112</integer>
+		</dict>
 		<key>PC6_01.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
