@@ -43,4 +43,63 @@
         location.distance.miles = 375;
         location.distance.meters = 603375;
  
+ 11.11  void display(const Rectangle &r) {
+            cout << r.length << endl;
+            cout << r.width << endl;
+        }
+ 
+ 11.12  void getInfo(Rectangle &r) {
+            cout << "Enter length: ";
+            cin >> r.length;
+            cout << "Enter width: ";
+            cin >> r.width;
+        }
+ 
+ 11.13  Rectangle getInfo() {
+            Rectangle temp;
+            
+            cout << "Enter length: ";
+            cin >> temp.length;
+            cout << "Enter width: ";
+            cin >> temp.width;
+            return temp;
+        }
+ 
+ 11.14  void displayPtr(Rectangle *r);
+ 
+ 11.15  B
+ 
+ 11.16  union ThreeTypes
+        {
+            char letter;
+            int whole;
+            double real;
+        }
+ 
+ 11.17  ThreeTypes array[50];
+ 
+ 11.18  for (int x = 0; x < 50; x++) {
+            array.real = 2.37;
+        }
+ 
+ 11.19  for (int x = 0; x < 50; x++) {
+            array.letter = 'A';
+        }
+ 
+ 11.20  for (int x = 0; x < 50; x++) {
+            array.whole = 10;
+        )
+ 
+ 11.21  ROSE = 0; DAISY = 1; PETUNIA = 2
+ 
+ 11.22  0 7 8
+ 
+ 11.23  anonymous
+ 
+ 11.24  Z is not greater than X.
+ 
+ 11.25  c = static_cast<Color>(0);
+ 
+ 11.26  c = static_cast<Color>(c + 1);
+ 
  */
