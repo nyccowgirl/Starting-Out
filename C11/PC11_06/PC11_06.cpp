@@ -1,4 +1,5 @@
 /*
+ SOCCER SORES
  
  Write a program that stores data about a soccer player in a structure. The program should
  keep an array of 12 of these structures. When the program runs it should ask the user to
