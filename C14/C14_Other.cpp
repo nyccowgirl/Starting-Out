@@ -64,4 +64,12 @@
  
  14.29  dummy parameter
  
+ 14.31  data is properly converted seamlessly into programming environment
+ 
+ 14.32  they return value of the data type they are converting to
+ 
+ 14.33  BlackBox::operator int()
+ 
+ 14.34  Big has a Small with Big being the object aggregation.
+ 
  */
