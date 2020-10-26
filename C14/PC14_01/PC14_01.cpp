@@ -147,4 +147,8 @@ int main(int argc, const char * argv[]) {
  seven thousand seven hundred seventy seven
  Program ended with exit code: 0
  
+ Enter a number from 0 to 9999: 0
+ zero
+ Program ended with exit code: 0
+ 
  */
